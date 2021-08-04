@@ -1,0 +1,106 @@
+body {
+  font-family: "Lato", "Ariel", sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+}
+h3,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+#whole_section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+    url(hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+#section {
+  width: 600px;
+  display: block;
+  height: 55px;
+  margin: auto 0px;
+  background-color: #f2f2f211;
+  border: 1px solid #f2f2f211;
+  border-radius: 50px;
+}
+#navbar {
+  display: flex;
+  padding: 20px 50px;
+  padding-right: 80px;
+  /* z-index: 99; */
+  padding-left: 4%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.options {
+  display: flex;
+  margin: auto 0px;
+}
+.options h3 {
+  border-bottom: 5px solid transparent;
+  text-align: center;
+  margin: 0px 20px;
+  padding: 20px 6%;
+  text-align: center;
+  background-color: #f2f2f211;
+  border-radius: 30px;
+  transition: border-bottom 0.5s;
+  /* margin-bottom: 30px; */
+}
+.options h3:hover {
+  border-bottom: 5px solid #e67e22;
+}
+.options h3 a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  margin: auto 0px;
+  /* padding-bottom: 10px; */
+}
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+#query {
+  border: none;
+  background-color: transparent;
+  color: #f2f2f2;
+}
+#charDiv {
+  width: 560px;
+  max-height: 350px;
+  overflow-y: scroll;
+  position: fixed;
+  visibility: hidden;
+  background-color: #f2f2f298;
+  z-index: 999;
+  border-radius: 20px;
+  padding: 0px 20px;
+  margin-top: 10px;
+  scrollbar-width: thin;
+}
+#eachSpace {
+  padding: 10px;
+  color: black;
+}
+
+#inputBox {
+  display: flex;
+  padding: 0px 10px;
+  margin: 10px;
+  color: #f2f2f2;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+.icon {
+  font-size: 30px;
+  padding: 0px 15px;
+}
