@@ -10,6 +10,12 @@
 <script type="module">
   import navbar from "./components/navbar.js";
   import { singleFun } from "./script/showdata.js";
+
   document.body.innerHTML = navbar();
+  let div = document.createElement("div");
+  div.innerHTML = `<div class="text_box">
+    <h1>Yummy food which will please you time,<br/> money and tummy</h1>
+  </div>`;
+  document.body.append(div);
   singleFun();
 </script>

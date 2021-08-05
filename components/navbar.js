@@ -2,6 +2,7 @@ function navBar() {
   return `<div id="whole_section">
     <div id="navbar">
       <img src="css/logo-white.png" class="logo" />
+      <div class='space'></div>
       <div id="section">
         <div id="inputBox">
           <input
@@ -19,12 +20,15 @@ function navBar() {
         </div>
         <div id="charDiv"></div>
       </div>
-      <div class="options">
+      <div class='space'></div>
+        <h3><a href="#">SignUp</a></h3>
+        <h3><a href="#">LogIn</a></h3>
         <h3><a href="get.html">Receipe Of The Day</a></h3>
         <h3><a href="latest.html">Latest Receipe</a></h3>
-      </div>
     </div>
-  </div>`;
+  </div>
+  
+  `;
 }
 
 export default navBar;

@@ -9,55 +9,54 @@ p {
   padding: 0px;
 }
 #whole_section {
+  max-width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
     url(hero.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
-  background-attachment: fixed;
 }
 #section {
-  width: 600px;
+  width: 700px;
   display: block;
   height: 55px;
   margin: auto 0px;
-  background-color: #f2f2f211;
-  border: 1px solid #f2f2f211;
+  background-color: #f2f2f21e;
+  border: 1px solid #f2f2f21e;
   border-radius: 50px;
 }
 #navbar {
+  width: 92%;
   display: flex;
-  padding: 20px 50px;
-  padding-right: 80px;
+  padding: 30px 4%;
+  flex-flow: row wrap;
+  /* background-color: #cc2020; */
   /* z-index: 99; */
-  padding-left: 4%;
-  justify-content: space-between;
   margin-bottom: 20px;
 }
-.options {
-  display: flex;
-  margin: auto 0px;
+.space {
+  flex: 1;
 }
-.options h3 {
+#navbar > h3 {
   border-bottom: 5px solid transparent;
   text-align: center;
-  margin: 0px 20px;
-  padding: 20px 6%;
-  text-align: center;
-  background-color: #f2f2f211;
+  padding: 0px 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f21e;
   border-radius: 30px;
   transition: border-bottom 0.5s;
-  /* margin-bottom: 30px; */
+  margin-left: 15px;
 }
-.options h3:hover {
+#navbar h3:hover {
   border-bottom: 5px solid #e67e22;
 }
-.options h3 a {
+#navbar h3 a {
   text-decoration: none;
   color: white;
   font-weight: 300;
-  margin: auto 0px;
-  /* padding-bottom: 10px; */
+  align-items: center;
 }
 .logo {
   height: 100px;
@@ -70,7 +69,7 @@ p {
   color: #f2f2f2;
 }
 #charDiv {
-  width: 560px;
+  width: 660px;
   max-height: 350px;
   overflow-y: scroll;
   position: fixed;
@@ -103,4 +102,16 @@ p {
 .icon {
   font-size: 30px;
   padding: 0px 15px;
+}
+.text_box {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  color: white;
+  margin-left: 50px;
+  font-size: 240%;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  transform: translate(-50%, -50%);
 }
