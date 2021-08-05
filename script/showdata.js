@@ -59,4 +59,40 @@ let singleFun = function () {
   };
 };
 
-export { singleFun };
+async function singleItem() {
+  let res = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
+  let { meals } = await res.json();
+  return meals;
+}
+
+function appendData(meals, parent) {
+  meals.forEach(({ strMealThumb, strArea, strCategory, idMeal, strMeal }) => {
+    let imgDiv = document.createElement("div");
+    imgDiv.setAttribute("class", "imgDiv");
+    let desDiv = document.createElement("div");
+    desDiv.setAttribute("class", "desDiv");
+
+    let figure = document.createElement("figure");
+    figure.setAttribute("class", "imgDivFigure");
+    let img = document.createElement("img");
+    img.src = strMealThumb;
+    figure.append(img);
+    imgDiv.append(figure);
+
+    let h3idMeal = document.createElement("h3");
+    h3idMeal.innerHTML = idMeal;
+    let h3Origin = document.createElement("h3");
+    h3Origin.innerHTML = strArea;
+    let h3Category = document.createElement("h3");
+    h3Category.innerHTML = strCategory;
+
+    let h3strMeal = document.createElement("h3");
+    h3strMeal.innerHTML = strMeal;
+
+    desDiv.append(h3idMeal, h3strMeal, h3Origin, h3Category);
+
+    parent.append(imgDiv, desDiv);
+  });
+}
+
+export { singleFun, singleItem, appendData };

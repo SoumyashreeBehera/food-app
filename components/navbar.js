@@ -27,7 +27,6 @@ function navBar() {
         <h3><a href="latest.html">Latest Receipe</a></h3>
     </div>
   </div>
-  
   `;
 }
 
