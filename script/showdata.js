@@ -67,6 +67,7 @@ async function singleItem() {
 
 function appendData(meals, parent) {
   meals.forEach(({ strMealThumb, strArea, strCategory, idMeal, strMeal }) => {
+    let eachMealDiv = document.createElement("div");
     let imgDiv = document.createElement("div");
     imgDiv.setAttribute("class", "imgDiv");
     let desDiv = document.createElement("div");
@@ -91,8 +92,18 @@ function appendData(meals, parent) {
 
     desDiv.append(h3idMeal, h3strMeal, h3Origin, h3Category);
 
-    parent.append(imgDiv, desDiv);
+    eachMealDiv.append(imgDiv, desDiv);
+    parent.append(eachMealDiv);
   });
 }
 
-export { singleFun, singleItem, appendData };
+async function latestMeal() {
+  let res = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
+  );
+  let { meals } = await res.json();
+  console.log(meals);
+  return meals;
+}
+
+export { singleFun, singleItem, appendData, latestMeal };

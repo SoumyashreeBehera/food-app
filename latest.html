@@ -9,7 +9,14 @@
 <body></body>
 <script type="module">
   import navbar from "./components/navbar.js";
-  import { singleFun } from "./script/showdata.js";
+  import { singleFun, latestMeal, appendData } from "./script/showdata.js";
   document.body.innerHTML = navbar();
   singleFun();
+
+  let latestMealDIv = document.createElement("div");
+  latestMealDIv.setAttribute("id", "latestMealDIv");
+  let response = latestMeal().then((data) => {
+    appendData(data, latestMealDIv);
+  });
+  document.body.append(latestMealDIv);
 </script>
